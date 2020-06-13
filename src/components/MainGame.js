@@ -36,6 +36,7 @@ class MainGame extends React.Component {
         }
         numberOfGuessing++;
         this.setState({ message, numberOfGuessing });
+        this.props.numberOfGuessingChange(numberOfGuessing)
     };
     render() {
         var { numberOfGuessing, currentGuessing, message } = this.state;

@@ -8,8 +8,8 @@ class Header extends React.Component {
     }
     render() {
         return (
-            <div className="jumbotron text-center">
-                <h1>Getting random number - {this.props.randomNumber} </h1>
+            <div style={this.props.numberOfGuessing >= 7 ? {backgroundColor: 'red'}:{}} className="jumbotron text-center">
+                <h1>Getting random number - {this.props.numberOfGuessing} </h1>
                 <p>
                     Tôi đã random một số trong khoảng 1 - 100, đố bạn đoán được?
                 </p>

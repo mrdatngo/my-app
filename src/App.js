@@ -7,6 +7,7 @@ class RandomGame extends React.Component {
         super(props);
         this.state = {
             randomNumber: 0,
+            numberOfGuessing: 0,
         }
     }
 
@@ -20,11 +21,18 @@ class RandomGame extends React.Component {
         return Math.floor(Math.random() * 100) + 1;
     };
 
+    numberOfGuessingChange = (numberOfGuessing) => {
+        // alert(numberOfGuessing)
+        this.setState({
+            numberOfGuessing
+        })
+    }
+
     render() {
         return (
             <div>
-                <Header start={2} end={100} randomNumber={this.state.randomNumber} />
-                <MainGame randomNumber={this.state.randomNumber} />
+                <Header numberOfGuessing={this.state.numberOfGuessing} start={2} end={100} randomNumber={this.state.randomNumber} />
+                <MainGame numberOfGuessingChange={this.numberOfGuessingChange} randomNumber={this.state.randomNumber} />
             </div>
         );
     }
