@@ -4,11 +4,12 @@ import RandomGame, { App, App2 } from './App';
 import Caculate from './caculate/Caculate'
 import JsxExtend from './jsxextend/JsxExtend'
 import Parent from './lifecyle/Parent'
+import Auth from './authen/App'
 import * as serviceWorker from './serviceWorker';
 
 // ReactDOM.render( <RandomGame user_name="admin" />, document.getElementById('root'));
 // ReactDOM.render( <Caculate />, document.getElementById('root'));
-ReactDOM.render( <Parent />, document.getElementById('root'));
+ReactDOM.render( <Auth />, document.getElementById('root'));
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
